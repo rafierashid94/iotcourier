@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+</style>
+<script>
+function validateForm() {
+    var x = document.forms["courier_form"]["parcel_number"].value;
+    if (x == "") {
+        alert("Tracking number must be filled out");
+        return false;
+    }
+}
+</script>
+
+</head>
+<h2>
+TRACK YOUR PARCEL HERE
+</h2>
+<form action="track_result.php" method="POST" name="courier_form" onsubmit="return validateForm()">
+INSERT YOUR TRACKING NUMBER<br>
+<input type="text" name="parcel_number" value=""><br>
+<input type="submit" value="TRACK">
+
+</form>
+
+</html>
