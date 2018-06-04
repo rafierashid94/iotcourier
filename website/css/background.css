@@ -1,0 +1,7 @@
+body{
+background:url(img/frontcover.jpg) ;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;   
+}
